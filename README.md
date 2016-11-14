@@ -9,6 +9,7 @@ This program is written in PHP and requires version 5.5 or higher.
 
 **Windows**:
 Download PHP for Windows [here](http://windows.php.net/download/)
+
 Alternatively, you can download a full WAMP stack [here](https://bitnami.com/stack/wamp)
 
 For other operating systems, you can find the PHP download page at:
@@ -58,4 +59,5 @@ $crawler->output();
 ### Author
 
 Created by Jason Lipowicz
+
 Last modified: 14th November 2016
