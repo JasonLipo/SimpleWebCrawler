@@ -38,6 +38,11 @@ class Crawl {
             $this->domain .= "/" . $pathinfo["basename"] . "/";
         }
 
+        // Ensure there is only one "/" at the end of the domain
+        if (substr($this->domain, -1) == "/") {
+            $this->domain = rtrim($this->domain, "/") . "/";
+        }
+
     }
 
     /**
@@ -100,7 +105,7 @@ class Crawl {
                 else {
                     // If the attribute value is a relative URL,
                     // then prepend the relative domain to
-                    $attributes[] = $this->domain . $attr;
+                    $attributes[] = $this->domain . ltrim($attr, "/");
                 }
             }
         }
@@ -212,6 +217,8 @@ class Crawl {
         else {
             echo json_encode(["error" => "Invalid HTML source"]);
         }
+
+        echo PHP_EOL;
 
     }
 
