@@ -29,7 +29,7 @@ class Crawl {
         $pathinfo = pathinfo($this->url);
 
         // Store the "domain" for nice output
-        // e.g. http://example.com or https://www.domain.co,uk
+        // e.g. http://example.com or https://www.domain.co.uk
         $this->domain = $pathinfo["dirname"] . "/";
         if ($this->domain == "./") {
             $this->domain = "";
